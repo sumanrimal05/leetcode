@@ -1,5 +1,26 @@
+
+def two_sum(nums: list[int], target: int) -> list[int]:
+    values = {}
+
+    for index, value in enumerate(nums):
+        remaining = target - value
+
+        if remaining in values:
+            return [values[remaining], index]
+
+        else:
+            values[value] = index
+
+
+list_item = [7, 11, 9, 2]
+target = 9
+
+print(two_sum(list_item, target))
+
+
 # This algorithm can only be used if and only if the list is sorted
 # Time complexity for this is O(n)
+# Also in two sum problems looking for indices, it's bad idea to sort an array
 def two_sum_sorted(nums: list[int], target: int) -> list[int]:
     first = 0
     last = len(nums) - 1
