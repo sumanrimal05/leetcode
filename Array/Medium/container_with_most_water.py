@@ -1,3 +1,4 @@
+# Time complexity O(n)
 def maxArea(height: list[int]) -> int:
     high = 0
     left = 0
